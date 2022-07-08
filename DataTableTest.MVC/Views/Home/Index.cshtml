@@ -1,0 +1,35 @@
+<table id="testTable" class="display">
+    <thead>
+    <th>Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    </thead>
+</table>
+
+<input id="searchText">
+<button id="search">Search</button>
+
+@section scripts{
+    <script>
+    $(document).ready( function () {
+        let table = new DataTable('#testTable', {
+            // options
+            serverSide: true,
+            ajax: "/home/GetTableData",
+            columns: [                    
+                {data: "id"},
+                {data: "firstName"},
+                {data: "lastName"},
+            ],
+            processing: true
+        });
+    
+       $('#search').on('click', function () {
+           let searchValue = $("#searchText").val();
+           table.search(searchValue);
+           table.draw();
+       });
+    })
+    
+    </script>
+}

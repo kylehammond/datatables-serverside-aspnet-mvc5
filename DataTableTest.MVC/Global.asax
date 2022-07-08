@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="DataTableTest.MVC.MvcApplication" Language="C#" %>
