@@ -3,7 +3,6 @@ using System.Web.Mvc;
 using DataTables.AspNet.Core;
 using DataTables.AspNet.Mvc5;
 using DataTableTest.MVC.Contracts;
-using DataTableTest.MVC.Services;
 
 namespace DataTableTest.MVC.Controllers
 {
