@@ -15,7 +15,10 @@
         let table = new DataTable('#testTable', {
             // options
             serverSide: true,
-            ajax: "/home/GetTableData",
+            ajax: {
+                url: "/home/GetTableData",
+                type: "POST" 
+                },
             columns: [                    
                 {data: "id"},
                 {data: "firstName"},

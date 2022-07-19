@@ -20,6 +20,7 @@ namespace DataTableTest.MVC.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult GetTableData(IDataTablesRequest request)
         {
             var allData = _dataService.GetTestData().Where(d=>d.FirstName.ToLower().Contains(request.Search.Value.ToLower())).ToList();
