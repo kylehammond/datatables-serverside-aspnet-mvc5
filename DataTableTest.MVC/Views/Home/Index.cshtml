@@ -17,9 +17,12 @@
             serverSide: true,
             ajax: {
                 url: "/home/GetTableData",
-                type: "POST" 
-                },
-            columns: [                    
+                type: "POST",
+                data: (data) => {
+                    data.extraParameter = 'some value';
+                } 
+            },
+            columns: [
                 {data: "id"},
                 {data: "firstName"},
                 {data: "lastName"},

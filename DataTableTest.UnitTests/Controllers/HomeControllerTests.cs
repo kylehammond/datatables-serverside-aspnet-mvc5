@@ -20,7 +20,7 @@ public class HomeControllerTests
         var homeController = CreateHomeController();
         var request = CreateBasicRequest(1, startIndex, numberToTake, string.Empty);
 
-        var result = (DataTablesJsonResult)homeController.GetTableData(request);
+        var result = (DataTablesJsonResult)homeController.GetTableData(request, "some value");
         var data = (DataTablesResponse)result.Data;
         var dataValues = (IList)data.Data;
 
